@@ -12,7 +12,7 @@
         android:id="@+id/buttonClear"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="C"
+        android:text="@string/_C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toEndOf="@+id/buttonThree"
@@ -22,7 +22,7 @@
         android:id="@+id/buttonDivide"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="/"
+        android:text="@string/divide"
         app:layout_constraintStart_toStartOf="@+id/buttonClear"
         app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
 
@@ -30,7 +30,7 @@
         android:id="@+id/buttonMultiply"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="x"
+        android:text="@string/multiply"
         app:layout_constraintStart_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
@@ -38,7 +38,7 @@
         android:id="@+id/buttonMinus"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="-"
+        android:text="@string/minus"
         app:layout_constraintStart_toStartOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
@@ -46,7 +46,7 @@
         android:id="@+id/buttonPlus"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="+"
+        android:text="@string/plus"
         app:layout_constraintStart_toStartOf="@+id/buttonMinus"
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
@@ -54,7 +54,7 @@
         android:id="@+id/buttonEqual"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="="
+        android:text="@string/equal"
         app:layout_constraintEnd_toEndOf="@+id/buttonPlus"
         app:layout_constraintStart_toStartOf="@+id/buttonPlus"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
@@ -65,7 +65,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="1"
+        android:text="@string/_1"
         app:layout_constraintBottom_toTopOf="@+id/buttonFour"
         app:layout_constraintEnd_toStartOf="@+id/buttonTwo" />
 
@@ -74,7 +74,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
-        android:text="2"
+        android:text="@string/_2"
         app:layout_constraintBottom_toTopOf="@+id/buttonFive"
         app:layout_constraintEnd_toStartOf="@+id/buttonSix"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,7 +86,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="3"
+        android:text="@string/_3"
         app:layout_constraintBottom_toTopOf="@+id/buttonSix"
         app:layout_constraintStart_toEndOf="@+id/buttonTwo" />
 
@@ -95,7 +95,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginEnd="16dp"
-        android:text="4"
+        android:text="@string/_4"
         app:layout_constraintEnd_toStartOf="@+id/buttonFive"
         app:layout_constraintTop_toTopOf="@+id/buttonFive" />
 
@@ -103,7 +103,7 @@
         android:id="@+id/buttonFive"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="5"
+        android:text="@string/_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
@@ -116,7 +116,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
-        android:text="6"
+        android:text="@string/_6"
         app:layout_constraintStart_toEndOf="@+id/buttonFive"
         app:layout_constraintTop_toTopOf="@+id/buttonFive" />
 
@@ -126,7 +126,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="7"
+        android:text="@string/_7"
         app:layout_constraintEnd_toStartOf="@+id/buttonEight"
         app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
 
@@ -135,7 +135,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:text="8"
+        android:text="@string/_8"
         app:layout_constraintStart_toStartOf="@+id/buttonFive"
         app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
 
@@ -145,7 +145,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="9"
+        android:text="@string/_9"
         app:layout_constraintStart_toEndOf="@+id/buttonEight"
         app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
 
@@ -154,7 +154,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="16dp"
-        android:text="0"
+        android:text="@string/_0"
         app:layout_constraintStart_toStartOf="@+id/buttonFive"
         app:layout_constraintTop_toBottomOf="@+id/buttonEight" />
 
@@ -165,7 +165,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
-        android:text="0"
+        android:text="@string/_0"
         android:textAlignment="textEnd"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonClear"
