@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/buttonClear"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/vert_width_short"
+        android:layout_height="@dimen/vert_height_short"
         android:text="@string/_C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
@@ -20,40 +20,40 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/vert_width_short"
+        android:layout_height="@dimen/vert_height_short"
         android:text="@string/divide"
         app:layout_constraintStart_toStartOf="@+id/buttonClear"
         app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/vert_width_short"
+        android:layout_height="@dimen/vert_height_short"
         android:text="@string/multiply"
         app:layout_constraintStart_toStartOf="@+id/buttonDivide"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonMinus"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/vert_width_short"
+        android:layout_height="@dimen/vert_height_short"
         android:text="@string/minus"
         app:layout_constraintStart_toStartOf="@+id/buttonMultiply"
         app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonPlus"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/vert_width_short"
+        android:layout_height="@dimen/vert_height_short"
         android:text="@string/plus"
         app:layout_constraintStart_toStartOf="@+id/buttonMinus"
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
     <Button
         android:id="@+id/buttonEqual"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:text="@string/equal"
         app:layout_constraintEnd_toEndOf="@+id/buttonPlus"
         app:layout_constraintStart_toStartOf="@+id/buttonPlus"
@@ -61,8 +61,8 @@
 
     <Button
         android:id="@+id/buttonOne"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/_1"
@@ -71,8 +71,8 @@
 
     <Button
         android:id="@+id/buttonTwo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginBottom="16dp"
         android:text="@string/_2"
         app:layout_constraintBottom_toTopOf="@+id/buttonFive"
@@ -82,7 +82,7 @@
 
     <Button
         android:id="@+id/buttonThree"
-        android:layout_width="80dp"
+        android:layout_width="@dimen/vert_width"
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
@@ -92,8 +92,8 @@
 
     <Button
         android:id="@+id/buttonFour"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginEnd="16dp"
         android:text="@string/_4"
         app:layout_constraintEnd_toStartOf="@+id/buttonFive"
@@ -101,8 +101,8 @@
 
     <Button
         android:id="@+id/buttonFive"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:text="@string/_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,8 +113,8 @@
 
     <Button
         android:id="@+id/buttonSix"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginStart="16dp"
         android:text="@string/_6"
         app:layout_constraintStart_toEndOf="@+id/buttonFive"
@@ -122,8 +122,8 @@
 
     <Button
         android:id="@+id/buttonSeven"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/_7"
@@ -132,8 +132,8 @@
 
     <Button
         android:id="@+id/buttonEight"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginTop="16dp"
         android:text="@string/_8"
         app:layout_constraintStart_toStartOf="@+id/buttonFive"
@@ -141,8 +141,8 @@
 
     <Button
         android:id="@+id/buttonNine"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/_9"
@@ -151,8 +151,8 @@
 
     <Button
         android:id="@+id/buttonZero"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/vert_width"
+        android:layout_height="@dimen/vert_height"
         android:layout_marginTop="16dp"
         android:text="@string/_0"
         app:layout_constraintStart_toStartOf="@+id/buttonFive"

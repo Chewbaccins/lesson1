@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="vert_width">80dp</dimen>
+    <dimen name="vert_height">80dp</dimen>
+    <dimen name="vert_width_short">60dp</dimen>
+    <dimen name="vert_height_short">60dp</dimen>
+    <dimen name="land_width">110dp</dimen>
+    <dimen name="land_height">60dp</dimen>
+    <dimen name="land_height_long">120dp</dimen>
+</resources>
