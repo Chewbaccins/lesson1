@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
     private String calculatorAction = ""; // тип действия калькулятора
 
     private TextView calculatorLine;
+    private final int[] numberButtonIds = new int[]{R.id.buttonZero, R.id.buttonOne, R.id.buttonTwo,
+            R.id.buttonThree, R.id.buttonFour, R.id.buttonFive, R.id.buttonSix, R.id.buttonSeven,
+            R.id.buttonEight, R.id.buttonNine};
+    private final int[] actionButtonIds = new int[]{R.id.buttonPlus, R.id.buttonMinus,
+            R.id.buttonMultiply, R.id.buttonDivide};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,112 +29,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         calculatorLine = findViewById(R.id.CalculatorNumberInput);
-        Button button0 = findViewById(R.id.buttonZero);
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(0);
-            }
-        });
-        Button button1 = findViewById(R.id.buttonOne);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(1);
-            }
-        });
-        Button button2 = findViewById(R.id.buttonTwo);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(2);
-            }
-        });
-        Button button3 = findViewById(R.id.buttonThree);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(3);
-            }
-        });
-        Button button4 = findViewById(R.id.buttonFour);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(4);
-            }
-        });
-        Button button5 = findViewById(R.id.buttonFive);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(5);
-            }
-        });
-        Button button6 = findViewById(R.id.buttonSix);
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(6);
-            }
-        });
-        Button button7 = findViewById(R.id.buttonSeven);
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(7);
-            }
-        });
-        Button button8 = findViewById(R.id.buttonEight);
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(8);
-            }
-        });
-        Button button9 = findViewById(R.id.buttonNine);
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addSymbol(9);
-            }
-        });
-        Button buttonPlus = findViewById(R.id.buttonPlus);
-        buttonPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculatorValue1 = Integer.parseInt(calculatorLine.getText().toString());
-                calculatorAction = "+";
-                clearView();
-            }
-        });
-        Button buttonMultiply = findViewById(R.id.buttonMultiply);
-        buttonMultiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculatorValue1 = Integer.parseInt(calculatorLine.getText().toString());
-                calculatorAction = "x";
-                clearView();
-            }
-        });
-        Button buttonMinus = findViewById(R.id.buttonMinus);
-        buttonMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculatorValue1 = Integer.parseInt(calculatorLine.getText().toString());
-                calculatorAction = "-";
-                clearView();
-            }
-        });
-        Button buttonDivide = findViewById(R.id.buttonDivide);
-        buttonDivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculatorValue1 = Integer.parseInt(calculatorLine.getText().toString());
-                calculatorAction = "/";
-                clearView();
-            }
-        });
+        setNumberButtonListeners();
+        setActionButtonListeners();
         Button buttonEqual = findViewById(R.id.buttonEqual);
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,9 +50,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setNumberButtonListeners() {
+        for (int i = 0; i < numberButtonIds.length; i++) {
+            findViewById(numberButtonIds[i]).setOnClickListener(v -> {
+                Button button = (Button)v;
+                addSymbol(Integer.parseInt(button.getText().toString()));
+            });
+        }
+
+    }
+
+    private void setActionButtonListeners() {
+        for (int i = 0; i < actionButtonIds.length; i++) {
+            findViewById(actionButtonIds[i]).setOnClickListener(v -> {
+                Button button = (Button)v;
+                calculatorValue1 = Integer.parseInt(calculatorLine.getText().toString());
+                calculatorAction = button.getText().toString();
+                clearView();
+            });
+        }
+    }
+
     private void addSymbol(int num) {
         String line = calculatorLine.getText().toString();
-
         if (line.equals("0")) line = "";
         line = line + Integer.toString(num);
         calculatorLine.setText(line);
